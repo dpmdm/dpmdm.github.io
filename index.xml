@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on DM Direct messages</title>
+    <title>Home on DM Thinking</title>
     <link>https://dpmdm.github.io/</link>
-    <description>Recent content in Home on DM Direct messages</description>
+    <description>Recent content in Home on DM Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate><atom:link href="https://dpmdm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 18:27:58 +0100</lastBuildDate><atom:link href="https://dpmdm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technique</title>
+      <link>https://dpmdm.github.io/blog/technique/</link>
+      <pubDate>Sun, 17 Apr 2022 23:29:46 +0200</pubDate>
+      
+      <guid>https://dpmdm.github.io/blog/technique/</guid>
+      <description>I don&amp;rsquo;t know why, but I have always seen documentation as critical part of software engineering. Not only as helpful comments in the code, but also to document the infrastructure and way-of-working.
+Some times I wonder if IT and archeology should be more connected. So many times knowledge are hidden by employees. All these time consuming handovers when people quit or change positions.
+The other side is that I have a short memory.</description>
+    </item>
+    
     <item>
       <title>Method</title>
       <link>https://dpmdm.github.io/blog/method/</link>
@@ -15,25 +26,32 @@
       <guid>https://dpmdm.github.io/blog/method/</guid>
       <description>Is it a good to try to exaplain how this site will grow&amp;hellip;.
 My initial thinking is that I will collect my &amp;ldquo;knowledge&amp;rdquo; into
- blog posts articles  </description>
+ blog posts articles  It would be great if the blog post can in some way lead to articles. Is it possilby to see the blogs as &amp;ldquo;behind the scenes&amp;rdquo; of the articles?
+Hm&amp;hellip;.</description>
     </item>
     
     <item>
       <title>Start</title>
       <link>https://dpmdm.github.io/blog/initial/</link>
-      <pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate>
+      <pubDate>Sun, 17 Apr 2022 04:05:05 -0500</pubDate>
       
       <guid>https://dpmdm.github.io/blog/initial/</guid>
-      <description>Why not start to write down my thoughts in a blog?</description>
+      <description>Why not start to write down my thoughts in a blog?
+I see my self as 30 years old.
+ A decade when I grown up A decade with studies A decade with work  That will sum up to 20 years of thinking about software engineering. But what would the purpose of it be?
+ If someone will read it, that&amp;rsquo;s great! I can show my family why I&amp;rsquo;m sitting up late Get my own material of the things I work on  Thats it, I will do it!</description>
     </item>
     
     <item>
-      <title>About</title>
+      <title>About Me</title>
       <link>https://dpmdm.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://dpmdm.github.io/about/</guid>
-      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.</description>
+      <description>I&amp;rsquo;m a software engineer that has a passion for understanding and connecting the dots.
+My programming journey This is a presentation of my learning path when we talk about programming.
+ BASIC     This was the first programming langugae I tried out. Inital I copied a game from a book. It took horrible long time to complete.
+The game was played as a bat. To complete the game the bat needed to eat up all bugs.</description>
     </item>
     
   </channel>
