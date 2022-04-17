@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on DM Direct messages</title>
+    <link>https://dpmdm.github.io/blog/</link>
+    <description>Recent content in Blog on DM Direct messages</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate><atom:link href="https://dpmdm.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Method</title>
+      <link>https://dpmdm.github.io/blog/method/</link>
+      <pubDate>Sun, 17 Apr 2022 16:31:31 +0200</pubDate>
+      
+      <guid>https://dpmdm.github.io/blog/method/</guid>
+      <description>Is it a good to try to exaplain how this site will grow&amp;hellip;.
+My initial thinking is that I will collect my &amp;ldquo;knowledge&amp;rdquo; into
+ blog posts articles  </description>
+    </item>
+    
+    <item>
+      <title>Start</title>
+      <link>https://dpmdm.github.io/blog/initial/</link>
+      <pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate>
+      
+      <guid>https://dpmdm.github.io/blog/initial/</guid>
+      <description>Why not start to write down my thoughts in a blog?</description>
+    </item>
+    
+  </channel>
+</rss>
