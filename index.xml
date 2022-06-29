@@ -9,6 +9,17 @@
     <lastBuildDate>Sun, 17 Apr 2022 18:27:58 +0100</lastBuildDate><atom:link href="https://dpmdm.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Compliance as code</title>
+      <link>https://dpmdm.github.io/article/vagrant/</link>
+      <pubDate>Sun, 22 May 2022 10:39:44 +0200</pubDate>
+      
+      <guid>https://dpmdm.github.io/article/vagrant/</guid>
+      <description>Vagrant Tutorial This is a page about getting started with vagrant and Ansible.
+TechStack  Vagrant Virtual box Ansible  Requirements  Install virtualbox Install vagrant Install git Restart the computer  Lab 1 Start a virtual server with vagrant Creating folder  Open git bash Create a folder and navigate to it  mkdir /c/vagrant-lab; cd /c/vagrant-lab Creating Vagrantfile In that folder execute
+$ vagrant init centos/7 A `Vagrantfile` has been placed in this directory.</description>
+    </item>
+    
+    <item>
+      <title>Compliance as code</title>
       <link>https://dpmdm.github.io/blog/compliance-as-code/</link>
       <pubDate>Sun, 22 May 2022 10:39:44 +0200</pubDate>
       
@@ -66,16 +77,6 @@ I see my self as 30 years old.
 My programming journey This is a presentation of my learning path when we talk about programming.
  BASIC     This was the first programming langugae I tried out. Inital I copied a game from a book. It took horrible long time to complete.
 The game was played as a bat. To complete the game the bat needed to eat up all bugs.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dpmdm.github.io/article/vagrant/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dpmdm.github.io/article/vagrant/</guid>
-      <description>Vagrant Tutorial This is a page about getting started with vagrant and Ansible. Each lab has the final files in related subfolder.
-TechStack  Vagrant Virtual box Ansible  Requirements  Install virtualbox Install vagrant Install git Restart the computer  Lab 1 Start a virtual server with vagrant Creating folder  Open git bash Create a folder and navigate to it  mkdir /c/vagrant-lab; cd /c/vagrant-lab Creating Vagrantfile In that folder execute</description>
     </item>
     
   </channel>
