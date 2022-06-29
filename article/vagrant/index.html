@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.97.0" />
-  <link rel="canonical" href="https://dpmdm.github.io/article/" />
+  <link rel="canonical" href="https://dpmdm.github.io/article/vagrant/" />
 
   
     
-    <meta name="description" content="Article">
+    <meta name="description" content="Vagrant Tutorial This is a page about getting started with vagrant and Ansible. Each lab has the final files in related subfolder.
+TechStack  Vagrant Virtual box Ansible  Requirements  Install virtualbox Install vagrant Install git Restart the computer  Lab 1 Start a virtual server with vagrant Creating folder  Open git bash Create a folder and navigate to it  mkdir /c/vagrant-lab; cd /c/vagrant-lab Creating Vagrantfile In that folder execute">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dpmdm.github.io/apple-touch-icon.png">
@@ -56,7 +57,7 @@
 
   
   
-  <title>Article | DM Thinking</title>
+  <title> | DM Thinking</title>
 </head>
 
   <body>
@@ -221,7 +222,7 @@
       
       
       
-      <a href="/article/" aria-current="page">
+      <a href="/article/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -264,36 +265,198 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Article</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/article/vagrant/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1></h1>
+    <h1 id="vagrant-tutorial">Vagrant Tutorial</h1>
+<p>This is a page about getting started with vagrant and Ansible.
+Each lab has the final files in related subfolder.</p>
+<h2 id="techstack">TechStack</h2>
+<ul>
+<li>Vagrant</li>
+<li>Virtual box</li>
+<li>Ansible</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Install virtualbox</li>
+<li>Install vagrant</li>
+<li>Install git</li>
+<li>Restart the computer</li>
+</ul>
+<h2 id="lab-1-start-a-virtual-server-with-vagrant">Lab 1 Start a virtual server with vagrant</h2>
+<h3 id="creating-folder">Creating folder</h3>
+<ul>
+<li>Open git bash</li>
+<li>Create a folder and navigate to it</li>
+</ul>
+<pre tabindex="0"><code>mkdir /c/vagrant-lab; cd /c/vagrant-lab
+</code></pre><h3 id="creating-vagrantfile">Creating Vagrantfile</h3>
+<p>In that folder execute</p>
+<pre tabindex="0"><code>$ vagrant init centos/7
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+</code></pre><p>Verify that the file Vagrantfile is there</p>
+<pre tabindex="0"><code>$ ls -la
+total 32
+drwxr-xr-x 1 nisse 197610    0 Jan 22 14:39 ./
+drwxr-xr-x 1 nisse 197610    0 Jan 22 14:39 ../
+-rw-r--r-- 1 nisse 197610 3084 Jan 22 14:39 Vagrantfile
+</code></pre><h3 id="start-vagrantfile">Start Vagrantfile</h3>
+<pre tabindex="0"><code>$ vagrant up
+Bringing machine &#39;default&#39; up with &#39;virtualbox&#39; provider...
+==&gt; default: Importing base box &#39;centos/7&#39;...
+==&gt; default: Matching MAC address for NAT networking...
+==&gt; default: Checking if box &#39;centos/7&#39; version &#39;2004.01&#39; is up to date...
+==&gt; default: Setting the name of the VM: vagrant-lab_default_1642858884089_53232
+==&gt; default: Clearing any previously set network interfaces...
+==&gt; default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==&gt; default: Forwarding ports...
+    default: 22 (guest) =&gt; 2222 (host) (adapter 1)
+==&gt; default: Booting VM...
+==&gt; default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+.
+.
+.
+    default: No guest additions were detected on the base box for this VM! Guest
+    default: additions are required for forwarded ports, shared folders, host only
+    default: networking, and more. If SSH fails on this machine, please install
+    default: the guest additions and repackage the box to continue.
+    default:
+    default: This is not an error message; everything may continue to work properly,
+    default: in which case you may ignore this message.
+==&gt; default: Rsyncing folder: /cygdrive/c/vagrant-lab/ =&gt; /vagrant
+</code></pre><h3 id="log-on-the-centos">Log-on the Centos</h3>
+<pre tabindex="0"><code>$ vagrant ssh
+[vagrant@localhost ~]$ 
+</code></pre><p>Now you are logged in to the centos server.
+To logg-off type in exit and press enter.</p>
+<pre tabindex="0"><code>[vagrant@localhost ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+</code></pre><h3 id="heading"></h3>
+<p>To erase the created server.</p>
+<pre tabindex="0"><code>$ vagrant destroy -f 
+==&gt; default: Forcing shutdown of VM...
+==&gt; default: Destroying VM and associated drives...
+</code></pre><h2 id="lab-2-enabling-ansible">Lab 2 Enabling Ansible</h2>
+<p>Edit the Vagrantfile.
+Add the below before the last &ldquo;end&rdquo;</p>
+<pre tabindex="0"><code>config.vm.provision &#34;ansible_local&#34; do |ansible|
+    ansible.playbook = &#34;playbook.yml&#34;
+end
+</code></pre><p>Add a file playbook.yml with the following content</p>
+<pre tabindex="0"><code>---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: Ensure apache is at the latest version
+    ansible.builtin.yum:
+      name: httpd
+      state: latest
+
+  - name: Start service httpd, if not started
+    ansible.builtin.service:
+      name: httpd
+      state: started
+</code></pre><h3 id="start-the-virtual-machine-and-provisioning">Start the virtual machine and provisioning</h3>
+<pre tabindex="0"><code>$ vagrant up
+Bringing machine &#39;default&#39; up with &#39;virtualbox&#39; provider...
+==&gt; default: Importing base box &#39;centos/7&#39;...
+==&gt; default: Matching MAC address for NAT networking...
+==&gt; default: Checking if box &#39;centos/7&#39; version &#39;2004.01&#39; is up to date...
+==&gt; default: Setting the name of the VM: vagrant-lab_default_1642859761846_96804
+.
+.
+.
+==&gt; default: Rsyncing folder: /cygdrive/c/vagrant-lab/ =&gt; /vagrant
+==&gt; default: Running provisioner: ansible_local...
+ default: Installing Ansible...
+    default: Running ansible-playbook...
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [default]
+
+TASK [Ensure apache is at the latest version] **********************************
+changed: [default]
+
+TASK [Start service httpd, if not started] *************************************
+changed: [default]
+
+PLAY RECAP *********************************************************************
+default                    : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre><p>Verify that the Apache httpd server ahs been installed and is running.</p>
+<pre tabindex="0"><code>$ vagrant ssh
+</code></pre><pre tabindex="0"><code>[vagrant@localhost ~]$ systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2022-01-22 13:56:51 UTC; 1min 29s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 2915 (httpd)
+   Status: &#34;Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec&#34;
+   CGroup: /system.slice/httpd.service
+           ├─2915 /usr/sbin/httpd -DFOREGROUND
+           ├─2916 /usr/sbin/httpd -DFOREGROUND
+           ├─2917 /usr/sbin/httpd -DFOREGROUND
+           ├─2918 /usr/sbin/httpd -DFOREGROUND
+           ├─2919 /usr/sbin/httpd -DFOREGROUND
+           └─2920 /usr/sbin/httpd -DFOREGROUND
+</code></pre><h3 id="exit-and-destroy-the-virtual-machine">Exit and destroy the virtual machine</h3>
+<pre tabindex="0"><code>[vagrant@localhost ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+</code></pre><pre tabindex="0"><code>$ vagrant destroy -f
+==&gt; default: Forcing shutdown of VM...
+==&gt; default: Destroying VM and associated drives...
+</code></pre><h2 id="lab-3-enable-http-traffic-to-the-virtual-machine">Lab 3 enable http traffic to the virtual machine</h2>
+<p>In the vagrant file add</p>
+<pre tabindex="0"><code>config.vm.network &#34;forwarded_port&#34;, guest: 80  , host: 80
+</code></pre><p>Start up the virtual machine</p>
+<pre tabindex="0"><code>$ vagrant up
+Bringing machine &#39;default&#39; up with &#39;virtualbox&#39; provider...
+==&gt; default: Importing base box &#39;centos/7&#39;...
+==&gt; default: Matching MAC address for NAT networking...
+==&gt; default: Checking if box &#39;centos/7&#39; version &#39;2004.01&#39; is up to date...
+==&gt; default: Setting the name of the VM: vagrant-lab_default_1642859761846_96804
+.
+.
+.
+==&gt; default: Rsyncing folder: /cygdrive/c/vagrant-lab/ =&gt; /vagrant
+==&gt; default: Running provisioner: ansible_local...
+ default: Installing Ansible...
+    default: Running ansible-playbook...
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [default]
+
+TASK [Ensure apache is at the latest version] **********************************
+changed: [default]
+
+TASK [Start service httpd, if not started] *************************************
+changed: [default]
+
+PLAY RECAP *********************************************************************
+default                    : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre><p>Verify that you can acces the httpd start page from a browser.
+Start a browser and go to</p>
+<ul>
+<li>http://localhost:80</li>
+</ul>
+<p>Yous should se</p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo_kLk7j5-6BFN6ADV2JKojZZcFAbcsxQ-SA&amp;usqp=CAU" alt="httpd"></p>
+
+  </main>
 
           
             <footer role="contentinfo">

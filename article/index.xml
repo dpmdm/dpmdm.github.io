@@ -7,5 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate><atom:link href="https://dpmdm.github.io/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://dpmdm.github.io/article/vagrant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dpmdm.github.io/article/vagrant/</guid>
+      <description>Vagrant Tutorial This is a page about getting started with vagrant and Ansible. Each lab has the final files in related subfolder.
+TechStack  Vagrant Virtual box Ansible  Requirements  Install virtualbox Install vagrant Install git Restart the computer  Lab 1 Start a virtual server with vagrant Creating folder  Open git bash Create a folder and navigate to it  mkdir /c/vagrant-lab; cd /c/vagrant-lab Creating Vagrantfile In that folder execute</description>
+    </item>
+    
   </channel>
 </rss>
